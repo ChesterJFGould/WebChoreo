@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      WebChoreo
   other-modules:
       Paths_WebChoreo
   autogen-modules:
@@ -35,6 +35,13 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , bytestring
+    , http-types
+    , text
+    , wai
+    , wai-websockets
+    , warp
+    , websockets
   default-language: Haskell2010
 
 executable WebChoreo-exe
@@ -49,6 +56,13 @@ executable WebChoreo-exe
   build-depends:
       WebChoreo
     , base >=4.7 && <5
+    , bytestring
+    , http-types
+    , text
+    , wai
+    , wai-websockets
+    , warp
+    , websockets
   default-language: Haskell2010
 
 test-suite WebChoreo-test
@@ -64,4 +78,11 @@ test-suite WebChoreo-test
   build-depends:
       WebChoreo
     , base >=4.7 && <5
+    , bytestring
+    , http-types
+    , text
+    , wai
+    , wai-websockets
+    , warp
+    , websockets
   default-language: Haskell2010
